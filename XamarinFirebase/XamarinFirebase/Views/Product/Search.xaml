@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.Search"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="Ürün Adı ile Ara"
+                    TextTransform="None"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    Margin="50,30,50,30"
+                    Padding="15"
+                    CornerRadius="30"
+                    x:Name="SearchWithName"
+                    Clicked="SearchWithName_Clicked"/>
+            
+            <Button Text="Barkod ile Ara"
+                    TextTransform="None"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    Margin="50,30,50,30"
+                    Padding="15"
+                    CornerRadius="30"
+                    x:Name="Barcode"
+                    Clicked="Barcode_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.LoginPage"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout Padding="15"
+                     VerticalOptions="Center">
+            <Label Text="Giriş Yapın!"
+                   TextColor="#F0EDEA"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   FontSize="Title"/>
+            <Entry Placeholder="E-mail adresinizi giriniz..." PlaceholderColor="#F0EDEA" x:Name="TxtEmail" Margin="30,100,30,10" TextColor="#F0EDEA"/>
+            <Entry Placeholder="Şifrenizi giriniz..." IsPassword="True"  PlaceholderColor="#F0EDEA" x:Name="TxtPassword" Margin="30,0,30,30" TextColor="#F0EDEA"/>
+
+            <Button Text="Giriş Yap"
+                    TextTransform="None"
+                    x:Name="SignInButton"
+                    Padding="15"
+                    Margin="30,30,30,50"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Clicked="SignInButton_Clicked"/>
+
+            <Label Text="Kayıt Ol"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   x:Name="RegisterLabel"
+                   Margin="0,0,0,50">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="RegisterTap"
+                                           Tapped="RegisterTap_Tapped">
+                    </TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Tanıtım Sayfalarımıza Erişmek İçin Dokun!"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   x:Name="PreviewLabel"
+                   TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="PreviewTap"
+                                           Tapped="PreviewTap_Tapped">
+                    </TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.FavoriteProducts"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ProductListView"
+                  ItemsSource="{Binding products}"
+                  HasUnevenRows="True"
+                  ItemTapped="ProductListView_ItemTapped"
+                  IsRefreshing="True"
+                  IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="30" BackgroundColor="#F0EDEA" Margin="60,15,60,15">
+                                <Frame Padding="0"
+                                   HeightRequest="200"
+                                   WidthRequest="0"
+                                   BackgroundColor="White"
+                                   CornerRadius="0"
+                                   IsClippedToBounds="True">
+                                    <Frame.Content>
+                                        <Image Source="{Binding Image}" Aspect="Fill"/>
+                                    </Frame.Content>
+                                </Frame>
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="{Binding ProductName}" FontSize="Medium" TextColor="#2F2F2F"/>
+                                    <Label Text="{Binding NameOfMarket}" TextColor="#2F2F2F"/>
+                                    <Label Text="{Binding Price}" x:Name="LabelPrice" TextColor="#2F2F2F"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

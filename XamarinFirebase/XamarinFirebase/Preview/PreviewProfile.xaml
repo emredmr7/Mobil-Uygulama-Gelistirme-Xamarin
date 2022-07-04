@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Preview.PreviewProfile"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="İçerideki Bilgi ve Butonları Görmek İçin Üye Olun!"
+                   TextColor="#F0EDEA"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Giriş Yapmak İçin Tıklayın."
+                    TextTransform="None"
+                    x:Name="ForSignIn"
+                    Padding="15"
+                    Margin="30,30,30,50"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Clicked="ForSignIn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

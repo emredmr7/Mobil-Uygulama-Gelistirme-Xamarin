@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.RegisterUser"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout Padding="15"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="Haydi Kayıt Olun!"
+                   TextColor="#F0EDEA"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="Title"
+                   FontAttributes="Bold"/>
+
+            <Entry Placeholder="Ad"
+                   x:Name="TxtName"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,30,30,10" 
+                   TextColor="#F0EDEA"/>
+            <Entry Placeholder="E-mail"
+                   x:Name="TxtEmail"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,0,30,10" 
+                   TextColor="#F0EDEA"/>
+            <Entry Placeholder="Şifre"
+                   x:Name="TxtPassword"
+                   IsPassword="True"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,0,30,10"/>
+            <Entry IsPassword="True"
+                   Placeholder="Şifrenizi Tekrar Edin"
+                   x:Name="TxtConfirmPass"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,0,30,10"/>
+            <Label Text="Profil Fotoğrafınızı Belirleyin : "
+                   FontAttributes="Bold"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,10"/>
+            <Button Text="Galeriden Seç"
+                    x:Name="ChoosePhoto"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Padding="10"
+                    TextTransform="None"
+                    Margin="80,0,80,0"
+                    Clicked="ChoosePhoto_Clicked"/>
+            <Button Text="Fotoğraf Çek"
+                    x:Name="TakePhoto"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Padding="10"
+                    TextTransform="None"
+                    Margin="80,0,80,0"
+                    Clicked="TakePhoto_Clicked"/>
+            <Image x:Name="FileImage"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+
+            <Button Text="Kayıt Ol" x:Name="RegisterButton"
+                    Clicked="RegisterButton_Clicked"
+                    BackgroundColor="#827098"
+                    BorderWidth="2"
+                    BorderColor="#F0EDEA"
+                    CornerRadius="30"
+                    Padding="15"
+                    TextTransform="None"
+                    Margin="30,0,30,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:tabbedbottm="clr-namespace:XamarinFirebase.Preview"
+             x:Class="XamarinFirebase.Preview.PreviewTabbed"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#827098"
+            SelectedTabColor="#FFFFFF"
+            UnselectedTabColor="#D8C9F4"
+            BarTextColor="#F0EDEA"
+            NavigationPage.HasNavigationBar="false">
+  <!--Pages can be added as references or inline-->
+    <tabbedbottm:PreviewProductList Title="Ürünler" IconImageSource="product.png"></tabbedbottm:PreviewProductList>
+    <tabbedbottm:PreviewSearch Title="Ara" IconImageSource="search.png"></tabbedbottm:PreviewSearch>
+    <tabbedbottm:PreviewFavorites Title="Favoriler" IconImageSource="favorite.png"></tabbedbottm:PreviewFavorites>
+    <tabbedbottm:PreviewProfile Title="Profil" IconImageSource="profile.png"></tabbedbottm:PreviewProfile>
+</TabbedPage>

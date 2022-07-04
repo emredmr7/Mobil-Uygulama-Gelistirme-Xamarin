@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.ProductEntry"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Ürün Gir"
+                   TextColor="#F0EDEA"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="Title"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Ürün Fotoğrafı Seçmek İçin Kareye Dokununuz"
+                   TextColor="#F0EDEA"
+                   Margin="50,30,50,10"
+                   />
+            <Image x:Name="ProductImage"
+                   HeightRequest="120" 
+                   WidthRequest="70"
+                   BackgroundColor="#F0EDEA"
+                   Margin="50,0,50,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImageTap"
+                                          Tapped="ImageTap_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Entry x:Name="TxtName"
+                   Placeholder="Ürün Adı"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,10,30,10" 
+                   TextColor="#F0EDEA"/>
+            <Entry x:Name="TxtMarket"
+                   Placeholder="Market Adı"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,10,30,10"  
+                   TextColor="#F0EDEA"/>
+            <Entry x:Name="TxtPrice"
+                   Keyboard="Numeric"
+                   Placeholder="Fiyat"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,10,30,10"  
+                   TextColor="#F0EDEA"/>
+            <Entry x:Name="TxtBarcode"
+                   Keyboard="Numeric"
+                   Placeholder="Ürün Barkodu"
+                   PlaceholderColor="#F0EDEA"
+                   Margin="30,10,30,10" 
+                   TextColor="#F0EDEA"/>
+            <DatePicker x:Name="TxtPriceDate"
+                        Margin="30,10,30,10"/>
+
+            <Button Text="Kaydet"
+                    TextTransform="None"
+                    x:Name="SaveButton"
+                    Padding="15"
+                    Margin="30,20,30,50"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Clicked="ButtonSave_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

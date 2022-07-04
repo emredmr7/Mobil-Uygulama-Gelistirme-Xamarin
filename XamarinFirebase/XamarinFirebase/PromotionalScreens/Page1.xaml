@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.PromotionalScreens.Page1"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="ImageOne"
+                   Source="bilgi.png"
+                   HeightRequest="250"
+                   WidthRequest="250"
+                   Margin="60"
+                   />
+            <Label Text="Neden Geliştirildi?"
+                   HorizontalOptions="Center"
+                   FontSize="25"/>
+            <Label Text="Bu uygulama ile birlikte bir çok kullanıcı ürünlerin fiyatlarını görüp karşılaştırabilecek!"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="18"
+                   Margin="40"/>
+            <Button x:Name="next"
+                    Text="İlerle"
+                    TextColor="#827098"
+                    BackgroundColor="#F0EDEA"
+                    Margin="200,50,40,40"
+                    CornerRadius="40"
+                    Padding="20"
+                    Clicked="next_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.SearchPage"
+             BackgroundColor="#827098">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ekle"
+                     x:Name="AddToolBarItem"
+                     Clicked="AddToolBarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#827098">
+            <SearchBar Placeholder="Ürün Ara..."
+                       x:Name="TxtSearch"
+                       PlaceholderColor="#F0EDEA"
+                       TextColor="#F0EDEA"
+                       CancelButtonColor="#F0EDEA"
+                       Margin="30,10,40,20"
+                       SearchButtonPressed="TxtSearch_SearchButtonPressed"
+                       TextChanged="TxtSearch_TextChanged"
+                       ></SearchBar>
+            <ListView x:Name="ProductListView"
+                  ItemsSource="{Binding products}"
+                  HasUnevenRows="True"
+                  ItemTapped="ProductListView_ItemTapped"
+                  IsRefreshing="True"
+                  IsPullToRefreshEnabled="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Düzenle"  BackgroundColor="#5ED343"
+                                                   x:Name="EditSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="EditSwipeItem_Invoked"></SwipeItem>
+                                        <SwipeItem Text="Sil" BackgroundColor="#FF3E3E" CommandParameter="{Binding Id}"
+                                                   x:Name="DeleteSwipeItem"
+                                                   Invoked="DeleteSwipeItem_Invoked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <StackLayout Orientation="Vertical" Padding="30" BackgroundColor="#F0EDEA" Margin="60,0,60,15">
+                                    <Frame Padding="0"
+                                   HeightRequest="200"
+                                   WidthRequest="0"
+                                   BackgroundColor="white"
+                                   CornerRadius="0"
+                                   BorderColor="Teal"
+                                   IsClippedToBounds="True">
+                                        <Frame.Content>
+                                            <Image Source="{Binding Image}" Aspect="Fill"/>
+                                        </Frame.Content>
+                                    </Frame>
+                                    <StackLayout HorizontalOptions="CenterAndExpand">
+                                        <Label Text="{Binding ProductName}" FontSize="18" TextColor="#2F2F2F"/>
+                                        <Label Text="{Binding NameOfMarket}" TextColor="#2F2F2F"/>
+                                        <Label Text="{Binding Price, StringFormat='{0:C} ₺'}" x:Name="LabelPrice" FontSize="24" TextColor="#2F2F2F"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

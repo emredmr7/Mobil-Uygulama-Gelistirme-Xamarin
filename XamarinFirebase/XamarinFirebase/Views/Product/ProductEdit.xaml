@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.ProductEdit"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Ürün Güncelle"
+                TextColor="#F0EDEA"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="Title"
+                FontAttributes="Bold"/>
+            <Image x:Name="ProductImage"
+                   HeightRequest="150" BackgroundColor="#F0EDEA">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="ImageTap"
+                                          Tapped="ImageTap_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Entry x:Name="TxtId"
+                   Margin="30,0,30,0" 
+                   IsVisible="false"/>
+            <Label Text="Ürün Adı :"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,0"/>
+            <Entry x:Name="TxtName"
+                   Margin="30,0,30,0"
+                   Placeholder="Ürün Adı"/>
+
+            <Label Text="Market Adı :"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,0"/>
+            <Entry x:Name="TxtMarket"
+                   Margin="30,0,30,0" 
+                   Placeholder="Market Adı"/>
+
+            <Label Text="Ürün Fiyatı :"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,0"/>
+            <Entry x:Name="TxtPrice"
+                   Margin="30,0,30,0" 
+                   Keyboard="Numeric"
+                   Placeholder="Fiyat"/>
+
+            <Label Text="Fiyat Tarihi :"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,0"/>
+            <DatePicker x:Name="TxtPriceDate" 
+                        Margin="30,0,30,0"/>
+
+            <Label Text="Ürün Barkod Numarası :"
+                   TextColor="#F0EDEA"
+                   Margin="30,0,30,0"/>
+            <Entry x:Name="TxtBarcode"
+                   Margin="30,0,30,0" 
+                   Placeholder="Ürünün Barkodu"
+                   Keyboard="Numeric"/>
+
+
+            <Button Text="Güncelle"
+                    x:Name="ButtonUpdate"
+                    TextTransform="None"
+                    Padding="15"
+                    Margin="30,20,30,50"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Clicked="ButtonUpdate_Clicked"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

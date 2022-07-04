@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.PromotionalScreens.Page2"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="ImageOne"
+                   Source="tabbedsample.png"
+                   HeightRequest="80"
+                   WidthRequest="80"
+                   Margin="10,100,10,10"
+                   />
+            <Label Text="Alt bar yardımı ile uygulamada gezinti yap!"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="18"/>
+            <Image x:Name="ImageTwo"
+                   Source="buttonn.png"
+                   HeightRequest="50"
+                   WidthRequest="80"
+                   Margin="20"
+                   />
+            <Label Text="Tüm ürünler gör! İstediğini favorilerine ekle!"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="18"
+                   Margin="20"/>
+
+            <Image x:Name="ImageThree"
+                   Source="searchpreview.png"
+                   HeightRequest="80"
+                   WidthRequest="80"
+                   Margin="20"
+                   />
+            <Label Text="Ürünleri ister adı ile istersen de barkodu ile ara!"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="18"
+                   Margin="20"/>
+            <Label Text=""/>
+            <Button x:Name="next"
+                    Text="İlerle"
+                    TextColor="#827098"
+                    BackgroundColor="#F0EDEA"
+                    Margin="250,50,40,40"
+                    CornerRadius="40"
+                    Padding="20"
+                    Clicked="next_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.ProductDetails"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Ürün Bilgisi"
+                FontSize="Title"
+                FontAttributes="Bold"
+                TextColor="#F0EDEA"
+                HorizontalOptions="Center"/>
+
+            <Label Text="uzantı"
+                   x:Name="LabelImage"
+                   IsVisible="false"/>
+
+            <Label Text="Ürün Fotoğrafı"
+                   FontSize="Medium"
+                   TextColor="#F0EDEA"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,30,0,0"/>
+            <Image x:Name="LabelPicture"
+                   HeightRequest="150"
+                   WidthRequest="150"/>
+
+            <Label Text="Ürün Adı"
+                   FontSize="Medium"
+                   TextColor="#F0EDEA"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,30,0,0"/>
+            <Label x:Name="LabelName"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Market Adı"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,10,0,0"/>
+            <Label x:Name="LabelMarket"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Ürün Fiyatı"
+                   TextColor="#F0EDEA"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,10,0,0"/>
+            <Label x:Name="LabelPrice"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Fiyat Tarihi"
+                   TextColor="#F0EDEA"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,10,0,0"/>
+            <Label x:Name="LabelPriceDate"
+                   TextColor="#F0EDEA"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label x:Name="LabelFavorite"
+                   FontSize="Medium"/>
+
+            <Entry x:Name="TxtId"
+                   IsVisible="false"/>
+            <Entry x:Name="TxtName"
+                    IsVisible="false"/>
+            <Entry x:Name="TxtMarket"
+                    IsVisible="false"/>
+            <Entry x:Name="TxtPrice"
+                    IsVisible="false"/>
+            <Entry x:Name="TxtBarcode"
+                   IsVisible="false"/>
+            <DatePicker x:Name="TxtPriceDate"
+                        IsVisible="false"/>
+
+            <Button Text="Favorilere Ekle"
+                    x:Name="AddFavoriteButton"
+                    TextTransform="None"
+                    Padding="15"
+                    Margin="50,30,50,50"
+                    BackgroundColor="#F0EDEA"
+                    TextColor="#827098"
+                    CornerRadius="30"
+                    Clicked="AddFavoriteButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

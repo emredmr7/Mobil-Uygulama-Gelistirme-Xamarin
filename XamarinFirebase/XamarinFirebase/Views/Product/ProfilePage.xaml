@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebase.Views.Product.ProfilePage"
+             BackgroundColor="#827098">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label Text="Profil"
+                   TextColor="#F0EDEA"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   Margin="50,10,50,10"/>
+            <Image x:Name="ProfilePicture"
+                   Source="index.jpg"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+            
+            <Label x:Name="UserLabel"
+                   TextColor="#F0EDEA"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="UserNameLabel"
+                   TextColor="#F0EDEA"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            
+            <Button Text="Şifreyi Değiştir"
+                    TextTransform="None"
+                    TextColor="#827098"
+                    Padding="15"
+                    Margin="30,50,30,20"
+                    BackgroundColor="#F0EDEA"
+                    CornerRadius="30"
+                    x:Name="ChangePasswordButton" 
+                    Clicked="ChangePasswordButton_Clicked"/>
+            
+            <Button Text="Hesabı Sil"
+                    TextTransform="None"
+                    Padding="15"
+                    Margin="30,0,30,20"
+                    TextColor="#827098"
+                    BackgroundColor="#F0EDEA"
+                    CornerRadius="30"
+                    x:Name="DeleteAccount"
+                    Clicked="DeleteAccount_Clicked"/>
+            
+            <Button Text="Çıkış Yap"
+                    TextTransform="None"
+                    Padding="15"
+                    Margin="30,0,30,50"
+                    BackgroundColor="#827098"
+                    BorderWidth="2"
+                    BorderColor="#F0EDEA"
+                    CornerRadius="30"
+                    x:Name="LogOut"
+                    Clicked="LogOut_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
